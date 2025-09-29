@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+int x = 0;
+int y = 0;
+int z = 0;
+int extra = 0;
+int main()
+{
+    printf("Lutfen ilk sayiyi giriniz:     \n");
+    scanf("%d", &x);
+    printf("Lutfen ikinci sayiyi giriniz:     \n");
+    scanf("%d", &y);
+    printf("Lutfen ucuncu sayiyi giriniz:     \n");
+    scanf("%d", &z);
+
+    if(x > y){
+            extra = x;
+            x = y;
+            y = extra;
+    }
+
+    if(x > z){
+            extra = x;
+            x = z;
+            z = extra;
+    }
+
+    if(y > z){
+            extra = y;
+            y = z;
+            z = extra;
+    }
+
+    printf("Kucukten buyuge siralama:    %d %d %d\n", x,y,z);
+
+    return 0;
+}
